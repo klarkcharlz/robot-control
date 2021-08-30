@@ -1,0 +1,283 @@
+@media screen and (min-width: 801px) {
+    #settings {
+        border-width: 5px;
+        border-color: black;
+        border-style: solid;
+        width: 530px;
+        background-image: url('../img/back.png');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+
+    #select_robots, #set_cam, #pos, #pdi, #vacuum, #blowdown, #wings, #dismiss, #select_post, #inf, #send, #save_position {
+        border-width: 1px;
+        border-color: black;
+        border-style: dashed;
+        color: black;
+    }
+
+    select {
+        background: #302f2f;
+        font-size: 16px;
+        width: 245px;
+        color: white;
+    }
+
+    .button8 {
+        background: rgba(255, 255, 255, .2);
+        font-weight: 500;
+        text-decoration: none;
+        user-select: none;
+        outline: none;
+        border: 2px solid;
+        border-radius: 1px;
+        transition: 0.2s;
+        height: 30px;
+    }
+
+    .button8:hover {
+        background: rgba(255, 255, 255, .4);
+    }
+
+    .button8:active {
+        background: rgba(255, 255, 255, .9);
+    }
+
+    .greeating {
+        border-width: 2px;
+        border-color: black;
+        border-style: solid;
+        width: 200px;
+        height: 40px;
+        margin-bottom: 10px;
+        float: left;
+        display: block;
+    }
+
+    #exit {
+        float: left;
+        display: block;
+        margin-left: 5px;
+    }
+
+    #hi {
+        float: left;
+        display: block;
+        margin-top: 5px;
+    }
+
+    .greeating_menu {
+        width: 70px !important;
+    }
+
+    #left_menu {
+        margin-left: 2px;
+    }
+
+    #user_panel {
+        border-width: 3px;
+        border-color: black;
+        border-style: solid;
+        margin-bottom: 5px;
+        height: 45px;
+        width: 530px;
+
+        background-image: url('../img/back.png');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100%;
+
+    }
+
+
+    #logout_form, #menu_form {
+        padding-top: 3px;
+    }
+
+    .width_cor {
+        width: 530px !important;
+    }
+
+    #dismiss, #blowdown, #vacuum, #wings {
+        margin-bottom: 10px;
+    }
+
+    input[type=radio] {
+        transform: scale(1.5);
+        cursor: pointer;
+    }
+
+
+    #test_radio {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+    }
+
+    .tbl {
+        border: 2px solid black;
+        border-collapse: separate;
+        border-spacing: 5px 5px;
+    }
+
+    .tbl td {
+        border: 2px solid black;
+    }
+
+    td {
+        font-size: 96px;
+    }
+
+    #transfer_set {
+        margin-top: 10px;
+    }
+
+    .corect_w {
+        transform: scale(1.3) !important;
+        margin-left: 1px !important;
+    }
+
+    html, body{
+        background-color: lightpink;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    #settings {
+        border-width: 5px;
+        border-color: black;
+        border-style: solid;
+        background-image: url('../img/back.png');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+
+    #select_robots, #set_cam, #pos, #pdi, #vacuum, #blowdown, #wings, #dismiss, #select_post, #inf, #send, #save_position {
+        border-width: 1px;
+        border-color: black;
+        border-style: dashed;
+        color: black;
+    }
+
+    select {
+        background: #302f2f;
+        font-size: 16px;
+        color: white;
+    }
+
+    .button8 {
+        background: rgba(255, 255, 255, .2);
+        font-weight: 500;
+        text-decoration: none;
+        user-select: none;
+        outline: none;
+        border: 2px solid;
+        border-radius: 1px;
+        transition: 0.2s;
+        height: 30px;
+    }
+
+    .button8:hover {
+        background: rgba(255, 255, 255, .4);
+    }
+
+    .button8:active {
+        background: rgba(255, 255, 255, .9);
+    }
+
+    .greeating {
+        border-width: 2px;
+        border-color: black;
+        border-style: solid;
+        height: 40px;
+        margin-bottom: 10px;
+        float: left;
+        display: block;
+    }
+
+    #exit {
+        float: left;
+        display: block;
+        margin-left: 5px;
+    }
+
+    #hi {
+        float: left;
+        display: block;
+        margin-top: 5px;
+    }
+
+
+    #left_menu {
+        margin-left: 2px;
+    }
+
+    #user_panel {
+        border-width: 3px;
+        border-color: black;
+        border-style: solid;
+        margin-bottom: 5px;
+        height: 45px;
+
+        background-image: url('../img/back.png');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100%;
+
+    }
+
+
+    #logout_form, #menu_form {
+        padding-top: 3px;
+    }
+
+
+    #dismiss, #blowdown, #vacuum, #wings {
+        margin-bottom: 10px;
+    }
+
+    input[type=radio] {
+        transform: scale(1.5);
+        cursor: pointer;
+    }
+
+
+    #test_radio {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+    }
+
+    .tbl {
+        border: 2px solid black;
+        border-collapse: separate;
+        border-spacing: 5px 5px;
+    }
+
+    .tbl td {
+        border: 2px solid black;
+    }
+
+    td {
+        font-size: 96px;
+    }
+
+    #transfer_set {
+        margin-top: 10px;
+    }
+
+    .corect_w {
+        transform: scale(1.3) !important;
+        margin-left: 1px !important;
+    }
+
+    html {
+        background-image: url('../img/phone.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+
+}

@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+
+    {% block title %}
+        <title>Machine Vision</title>
+    {% endblock %}
+
+    {% block static %}
+        <link rel="stylesheet" href="{{ url_for('static', filename='style/style.css') }}" type="text/css"/>
+    {% endblock %}
+
+{% block content %}
+<div id="settings">
+    <div id="select_robots">
+        <select   name="spark" id="sparks">
+            <option selected>Pls Select Spark</option>
+            {% for spark, ip in spark_ip.items() %}
+            <option value="{{ip}}" data-name="{{spark}}">{{spark}}</option>
+            {% endfor %}
+        </select>
+        <select  name="offset" id="robots">
+            <option selected>Pls Select Robots</option>
+        </select>
+    </div>
+
+
+    <div id="set_cam" >
+        <h2>Настройка камеры</h2>
+        <button type="button" class="btn btn-danger" id="cam_on" name="cam_stat" value="1" disabled>Включить</button>
+        <button type="button" class="btn btn-danger" id="cam_off" name="cam_stat" value="0" disabled >Выключить</button>
+    </div>
+
+    <p>&nbsp;</p>
+
+    <div id="save_position" >
+        <button type="button" class="btn btn-danger" id="save_pos" disabled>
+            Сохранить положения камер</button>
+    </div>
+
+
+    <div id="pos">
+        <h2>Расположение камер</h2>
+        <form action="" method="post" id="position" >
+            <label for="y1_cam">y1</label>
+            <input id="y1_cam" type="number" value="0" name="cam_y1" min="0" max="9999" disabled>
+            <label for="y2_cam">y2</label>
+            <input id="y2_cam" type="number" value="0" name="cam_y2" min="0" max="9999" disabled>
+            <label for="x2_cam">x2</label>
+            <input id="x2_cam" type="number" value="0" name="cam_x2" min="0" max="9999" disabled>
+            <button onclick="control('position')" type="button"  class="button8"   id="pos_set" disabled>Сохранить</button>
+        </form>
+    </div>
+
+
+    <div id="pdi">
+        <h2>DPI</h2>
+        <form action="" method="post" id="dpi">
+            <label for="y1_dpi">y1</label>
+            <input id="y1_dpi" type="number" value="0" name="dpi_y1" min="0" max="9999" disabled>
+            <label for="y2_dpi">y2</label>
+            <input id="y2_dpi" type="number" value="0" name="dpi_y2" min="0" max="9999" disabled>
+            <label for="x2_dpi">x2</label>
+            <input id="x2_dpi" type="number" value="0" name="dpi_x2" min="0" max="9999" disabled>
+            <button onclick="control('dpi')" type="button" class="button8" id="dpi_set" disabled>Сохранить</button>
+        </form>
+    </div>
+
+
+</div>
+
+
+{% block post_content %}
+    <script src="{{ url_for('static', filename='scripts/machine_vision/scripts.js') }}"></script>
+{% endblock %}
+
+{% endblock %}

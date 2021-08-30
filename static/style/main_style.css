@@ -1,0 +1,39 @@
+@media screen and (min-width: 801px) {
+    .form_menu {
+        margin-bottom: 10px;
+        padding-top: 5px;
+        padding-left: 2px;
+    }
+
+    .main_menu {
+        border-width: 2px;
+        border-color: black;
+        border-style: solid;
+        width: 532px;
+
+        background-image: url('../img/back.png');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .form_menu {
+        margin-bottom: 10px;
+        padding-top: 5px;
+        padding-left: 2px;
+    }
+
+    .main_menu {
+        border-width: 2px;
+        border-color: black;
+        border-style: solid;
+
+
+        background-image: url('../img/back.png');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100%;
+    }
+}

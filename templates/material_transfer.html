@@ -1,0 +1,94 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    <title>Material Transfer</title>
+{% endblock %}
+
+{% block  static %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/style.css') }}" type="text/css"/>
+{% endblock %}
+
+{% block content %}
+    <div id="settings">
+
+        <div id="select_robots">
+            <select name="spark" id="sparks">
+                <option selected>Pls Select Spark</option>
+                {% for spark, ip in spark_ip.items() %}
+                    <option value="{{ ip }}" data-name="{{ spark }}">{{ spark }}</option>
+                {% endfor %}
+            </select>
+            <select name="offset" id="robots">
+                <option selected>Pls Select Robots</option>
+            </select>
+        </div>
+
+
+        <div>
+            <form action="" method="post" id="transfer_material_to_bd">
+
+                <div id="test_radio">
+
+                    <div id="from">
+                        <table class="tbl">
+                            <tr>
+                                <td class="_from" data-post="from" id="from_1_td">0</td>
+                                <td class="_from" data-post="from" id="from_2_td">0</td>
+                            </tr>
+                            <td class="_from" data-post="from" id="from_3_td">0</td>
+                            <td class="_from" data-post="from" id="from_4_td">0</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div id="to">
+                        <table class="tbl">
+                            <tr>
+                                <td class="_to" data-post="to" id="to_1_td">0</td>
+                                <td class="_to" data-post="to" id="to_2_td">0</td>
+                            </tr>
+                            <tr>
+                                <td class="_to" data-post="to" id="to_3_td">0</td>
+                                <td class="_to" data-post="to" id="to_4_td">0</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                </div>
+
+                <div id="inf">
+
+                    <label for="cnt">Количество: </label>
+                    <input id="cnt" type="number" value="0" name="cnt" min="0" max="9999" disabled>
+                    <label for="depth">Толщина: </label>
+                    <input id="depth" type="number" value="0" name="depth" min="0" max="9999" disabled>
+
+                    <div class="form-check form-switch">
+                        <label class="form-check-label" for="flexSwitchCheckDefault">&nbsp;&nbsp;&nbsp;Покрытие</label>
+                        <input name="coating" value="1" class="form-check-input corect_w" type="checkbox"
+                               id="flexSwitchCheckDefault" disabled>
+                    </div>
+
+                </div>
+
+                <div id="send">
+                    <button onclick="sendTransfer()" type="button" class="button8" id="transfer_set" disabled>Отправить
+                    </button>
+                </div>
+
+
+
+
+            </form>
+        </div>
+    </div>
+
+
+
+{% endblock %}
+
+{% block post_content %}
+    <script src="{{ url_for('static', filename='scripts/material_transfer/script.js') }}"></script>
+{% endblock %}
+
+

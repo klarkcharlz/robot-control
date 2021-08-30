@@ -1,0 +1,25 @@
+<div id="user_panel">
+
+    <div class="greeating">
+
+        <div id="hi">
+            <p>Hi {{ current_user.username }}</p>
+        </div>
+
+        <div id="exit">
+            <form action="/logout" method="get" id="logout_form">
+                <input type="submit" value="Выйти" id="logout" class="button8">
+            </form>
+        </div>
+
+    </div>
+
+    <div class="greeating greeating_menu">
+        <div id="left_menu">
+        <form action="/main" method="get" id="menu_form">
+            <input type="submit" value="Меню" class="button8">
+            </div>
+        </form>
+    </div>
+
+</div>

@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    <title>Robot Settings</title>
+{% endblock %}
+
+{% block static %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/main_style.css') }}" type="text/css"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/style.css') }}" type="text/css"/>
+{% endblock %}
+
+{% block content %}
+    <div class="main_menu">
+        <div id="material_transfer" class="form_menu">
+            <form action="/material_transfer" method="post">
+                <input class="button8 " type="submit" id="submit" name="submit" value="Переложить материал">
+            </form>
+        </div>
+
+        <div id="machine_vision" class="form_menu">
+            <form action="/machine_vision" method="post">
+                <input class="button8" type="submit" id="submit" name="submit" value="Настройка тех.зрения">
+            </form>
+        </div>
+
+        <div id="capture_control" class="form_menu">
+            <form action="/capture_control" method="post">
+                <input class="button8" type="submit" id="submit" name="submit" value="Управление захватом">
+            </form>
+        </div>
+    </div>
+{% endblock %}

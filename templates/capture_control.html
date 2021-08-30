@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    <title>Capture Control</title>
+{% endblock %}
+
+{% block static %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/style.css') }}" type="text/css"/>
+{% endblock %}
+
+{% block content %}
+
+    <div id="settings" class="width_cor">
+
+        <div id="select_robots">
+            <select name="spark" id="sparks">
+                <option selected>Pls Select Spark</option>
+                {% for spark, ip in spark_ip.items() %}
+                    <option value="{{ ip }}" data-name="{{ spark }}">{{ spark }}</option>
+                {% endfor %}
+            </select>
+            <select name="offset" id="robots">
+                <option selected>Pls Select Robots</option>
+            </select>
+        </div>
+
+        <div id="vacuum">
+            <h2>Вакуум</h2>
+            <button type="button" class="btn btn-danger" id="vacuum_on" name="vacuum" value="1" disabled>Включить
+            </button>
+            <button type="button" class="btn btn-danger" id="vacuum_off" name="vacuum" value="0" disabled>Выключить
+            </button>
+        </div>
+
+        <div id="blowdown">
+            <h2>Продувка</h2>
+            <button type="button" class="btn btn-danger" id="blowdown_on" name="blowdown" value="1" disabled>Включить
+            </button>
+            <button type="button" class="btn btn-danger" id="blowdown_off" name="blowdown" value="0" disabled>
+                Выключить
+            </button>
+        </div>
+
+         <hr>
+
+        <div id="wings">
+            <h2>Крылья</h2>
+            <button type="button" class="btn btn-danger" id="wings_raise"  disabled>Поднять</button>
+            <button type="button" class="btn btn-danger" id="wings_fall"  disabled>Опустить</button>
+            <button type="button" class="btn btn-danger" id="wings_go"  disabled>Отпустить</button>
+        </div>
+
+
+    </div>
+{% endblock %}
+
+
+{% block post_content %}
+    <script src="{{ url_for('static', filename='scripts/capture_control/scripts.js') }}"></script>
+{% endblock %}
